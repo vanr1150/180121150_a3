@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FakeChimp's Registration Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes="16x16">
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="img/logo-color.png" class="logo" height="120" width="120" alt="colormonkey">
+      <img src="img/logo_BW.png" class="logoBW" height="120" width="120" alt="bwmonkey">
+    </div>
+    <div class="header">
+      <h1>Get Started with your account</h1>
+    </div>
+    <div class="form">
+      <h2>Find your people, Engage your customers. Build your brand. Do it all with FakeChimp's Marketing Platform.</h2>
+      <form id="form" action="http://cp202-server.appspot.com/register_with_image" onsubmit="return validateEmail()" method="post" enctype="multipart/form-data">
+        <div class="form_title">
+          Email
+        </div>
+        <input type="text" id="email" name="email" placeholder="your@email.com" required><br><br>
+        <div class="form_title">
+          Country
+        </div>
+        <select id="country" name="country" required>
+          <option value="">Select</option>
+          <option value="Canada">Canada</option>
+          <option value="United States">United States</option>
+        </select>
+        <br><br>
+        <div class="form_title">
+          Description
+        </div>
+        <textarea name="description" id="description" rows="4" cols="80" required></textarea>
+        <br><br>
+        <div class="form_title">
+          Avatar Image
+        </div>
+        <input type="file" id="avatar" name="avatarImage" required><br><br>
+        <input type="hidden" name="student_id" id="student_id" value="180121150">
+        <input type="submit" class="button" name="submit" id="submit" onsubmit="validateEmail()" value="Get Started!">
+      </form>
+      <p>By clicking the "Get Started!" button, you are creating a FakeChimp account.</p><br><br>
+      <div class="footer">
+        ©2019 All Rights Reserved. FakeChimp® is a registered trademark of WLUCP202 Class.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
